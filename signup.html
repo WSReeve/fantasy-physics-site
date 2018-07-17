@@ -66,6 +66,34 @@
       <button id="btnSignUp" class="btn btn-action">Sign Up</button>
     </div>
     
+    // Get elements
+      var txtEmail = document.getElementById('txtEmail');
+      var txtPassword = document.getElementById('txtPassword');
+      var btnSignUp = document.getElementById('btnSignUp');
+    
+    // Add signup event
+    btnSignUp.addEventListener('click', e => {
+    // Get email and pass
+    // CHECK FOR REAL EMAIL HERE
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
+    // Sign In
+    const promise = auth.signInWithEmailAndPassword(email, pass);
+    promise.catch(e => console.log(e.message));
+    });
+    
+    // Add realtime listener
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      if(firebaseUser)
+        {
+            console.log(firebaseUser);
+        }
+      else
+        {
+            console.log('not logged in');
+        }
+    });
     
       </body>
     </html>

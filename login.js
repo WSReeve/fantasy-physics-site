@@ -29,5 +29,5 @@ function login()
       var errorMessage = error.message;
       // ...
     });
-    window.alert("Error: " + errorMessage);
+    window.alert("Error");
 }

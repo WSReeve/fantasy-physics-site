@@ -14,9 +14,6 @@ firebase.auth().onAuthStateChanged(function(user)
   }
 });
 
-
-
-
 function login()
 {
     var userEmail = document.getElementById("email_field").value;
@@ -29,5 +26,5 @@ function login()
       var errorMessage = error.message;
       // ...
     });
-    window.alert("Error");
+    window.alert(errorMessage);
 }

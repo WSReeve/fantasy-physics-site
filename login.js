@@ -1,3 +1,3 @@
 function login(){
-  window.alert(working);
+  alert(working);
 }

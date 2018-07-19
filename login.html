@@ -1,12 +1,14 @@
 <!DOCTYPE html> 
 <html>
-  <head>
-     <style>
-       .center{
+<head>
+<style>
+    .center
+    {
         padding: 70px 0;
         text-align: center;
-      }
-      .main-div input{
+    }
+    .main-div input
+    {
         display: block;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -14,87 +16,87 @@
         padding: 15px;
         width: 100%;
         margin-bottom: 20px
-      }
-    </style>
-   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    }
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
- <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css">
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css">
     <script type="text/javascript"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
-    authDomain: "fantasy-physics.firebaseapp.com",
-    databaseURL: "https://fantasy-physics.firebaseio.com",
-    projectId: "fantasy-physics",
-    storageBucket: "fantasy-physics.appspot.com",
-    messagingSenderId: "735145306132"
-  };
-  firebase.initializeApp(config);
-</script>
+    <script>
+        // Initialize Firebase
+        var config = 
+        {
+            apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
+            authDomain: "fantasy-physics.firebaseapp.com",
+            databaseURL: "https://fantasy-physics.firebaseio.com",
+            projectId: "fantasy-physics",
+            storageBucket: "fantasy-physics.appspot.com",
+            messagingSenderId: "735145306132"
+        };
+    firebase.initializeApp(config);
+    </script>
     <script src="login.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
- 
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>   
-      </button>
-      <a class="navbar-brand" href="index.html">Fantasy Physics</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="teamrosters.html">Team Rosters</a></li>
-      <li><a href="scoringrubric.html">Scoring Rubric</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="teamrosters.html">Team Rosters</a></li>
+        <li><a href="scoringrubric.html">Scoring Rubric</a></li>
     </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-      <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search...">
-        </div> 
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-    </form>
-       </div>
+<form class="navbar-form navbar-right" role="search">
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search...">
+</div> 
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+</form>
+</div>
 </nav>
     
-    
-     <h1 style="text-align:center;color:white"><font face="sans-serif"><i> Log In </i></h1>
+
+    <h1 style="text-align:center;color:white"><font face="sans-serif"><i> Log In </i></h1>
     <h3 style="text-align:center;color:white"><font face="sans-serif"><i> and continue to </i></h3>
-     <h2 style="text-align:center;color:white"><font face="sans-serif"><i> ~ unlock the potential ~ </i></h2>
+    <h2 style="text-align:center;color:white"><font face="sans-serif"><i> ~ unlock the potential ~ </i></h2>
     <div class="center">
-      
-      <div id="login_div" class="main-div input">
+    <div id="login_div" class="main-div input">
     <div class="container">
-      <input type="email" placeholder="Email" id="email_field"><br>
-      <input type="password" placeholder="Password" id="password_field"><br>
-      <button onclick="login()">Log In</button>
-      </div>
-      </div>
+        <input type="email" placeholder="Email" id="email_field"><br>
+        <input type="password" placeholder="Password" id="password_field"><br>
+        <button onclick="login()">Log In</button>
+    </div>
+    </div>
     </div>
        
-       <div id="user_div" class="main-div input">
+    <div id="user_div" class="main-div input">
          <h3 style="text-align:center;color:white"><font face="sans-serif">Welcome!</h3>
          <p id="user_para" style="text-align:center;color:white"><font face="sans-serif">You are currently logged in.</p>
          <button onclick="logout()">Logout</button>
-       </div> 
+    </div> 
 
-               
-       </body>
-      </html>
+</body>
+</html>

@@ -48,19 +48,6 @@ function signup()
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        if(errorCode == 'auth/email-already-in-use')
-        {
-            alert("This email already has an account. Please log in.");
-        }
-        else if(errorCode == 'auth/invalid-email')
-        {
-            alert("This email address is invalid. Try again.");
-        }
-        else
-        {
-            alert(errorMessage);
-        }
-        console.log(error);
     });
 }
 

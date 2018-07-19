@@ -24,7 +24,7 @@ function login()
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-     if(errorCode === 'auth/wrong-password')
+      if(errorCode === 'auth/wrong-password')
       {
           alert("Wrong password. Try again.");
       }
@@ -46,6 +46,22 @@ function signup()
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        if(errorCode === 'auth/email-already-in-use')
+        {
+            alert("This email already has an account. Please log in.");
+        }
+        else if(errorCode === 'auth/invalid-email')
+        {
+            alert("This email address is invalid. Try again.");
+        }
+        else if(errorCode === 'auth/weak-password')
+        {
+            alert("This password is too weak. Try again.");
+        }
+        {
+            alert(errorMessage);
+        }
+        console.log(error);
     });
 }
 

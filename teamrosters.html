@@ -1,174 +1,157 @@
 <!DOCTYPE html> 
 <html>
-  <head>
-     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
- <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
-    authDomain: "fantasy-physics.firebaseapp.com",
-    databaseURL: "https://fantasy-physics.firebaseio.com",
-    projectId: "fantasy-physics",
-    storageBucket: "",
-    messagingSenderId: "735145306132"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      </head>
-   <body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
-  
-     <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
+
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>   
-      </button>
-      <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="teamrosters.html">Team Rosters</a></li>
-      <li><a href="scoringrubric.html">Scoring Rubric</a></li>
-       <li><a href="joinatournament.html">Join a Tournament</a></li>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="teamrosters.html">Team Rosters</a></li>
+        <li><a href="scoringrubric.html">Scoring Rubric</a></li>
+        <li><a href="joinatournament.html">Join a Tournament</a></li>
     </ul>
     
-     <ul class="nav navbar-nav navbar-right">
-       <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
-      <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
         <input type="text" class="form-control" placeholder="Search...">
         </div> 
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-    </form>
-       </div>
-       
-</nav>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+        </form>
+    </div> 
     </nav>
      
-     <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Dark Matter</b></i></h2>
-       <h4 style="margin-left:5px;color:white">WIMP Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="http://www.picoexperiment.com/dm_problem.php" style="color:white">PICO</u></i></td>
-      <td><i><u><a href="http://cdms.berkeley.edu/" style="color:white">SuperCDMS</u></i></td>
-      <td><i><u><a href="https://www.cresst.de/exp_overview.php" style="color:white">CRESST</u></i></td>
-    </tr>
-    <tr>
-      <td><i><u><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.89.072013" style="color:white">SIMPLE</u></i></td>
-      <td><i><u><a href="https://www.pnnl.gov/about/ashby_accounts/tch_052018.asp" style="color:white">Pacific NW National Lab - WIMP Search</u></i></td>
-      <td><i><u><a href="http://lz.lbl.gov/" style="color:white">LX</u></i></td>
-    </tr>
-    <tr>
-      <td><i><u><a href="http://dpnc.unige.ch/dampe/" style="color:white">DAMPE</u></i></td>
-      <td><i><u><a href="http://www-sk.icrr.u-tokyo.ac.jp/xmass/about/message/index-e.html" style="color:white">XMASS</u></i></td>
-      <td><i><u><a href="http://meetings.aps.org/Meeting/APR18/Session/R17.9" style="color:white">DarkSide-20k</u></i></td>
-    </tr>
-     </table>
-     <h4 style="margin-left:5px;color:white">Dark/Hidden Sectors Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://na64.web.cern.ch/" style="color:white">CERN SPS/NA64</u></i></td>
-      <td><i><u><a href="https://confluence.slac.stanford.edu/display/hpsg/Heavy+Photon+Search+Experiment" style="color:white">SLAC/HPS</u></i></td>
-      <td><i><u><a href="http://people.roma2.infn.it/~dama/web/home.html" style="color:white">DAMA</u></i></td>
-    </tr>
-    </table>
-     <br>
+        <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Dark Matter</b></i></h2>
+        <h4 style="margin-left:5px;color:white">WIMP Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="http://www.picoexperiment.com/dm_problem.php" style="color:white">PICO</u></i></td>
+                <td><i><u><a href="http://cdms.berkeley.edu/" style="color:white">SuperCDMS</u></i></td>
+                <td><i><u><a href="https://www.cresst.de/exp_overview.php" style="color:white">CRESST</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.89.072013" style="color:white">SIMPLE</u></i></td>
+                <td><i><u><a href="https://www.pnnl.gov/about/ashby_accounts/tch_052018.asp" style="color:white">Pacific NW National Lab - WIMP Search</u></i></td>
+                <td><i><u><a href="http://lz.lbl.gov/" style="color:white">LX</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="http://dpnc.unige.ch/dampe/" style="color:white">DAMPE</u></i></td>
+                <td><i><u><a href="http://www-sk.icrr.u-tokyo.ac.jp/xmass/about/message/index-e.html" style="color:white">XMASS</u></i></td>
+                <td><i><u><a href="http://meetings.aps.org/Meeting/APR18/Session/R17.9" style="color:white">DarkSide-20k</u></i></td>
+            </tr>
+        </table>
+        <h4 style="margin-left:5px;color:white">Dark/Hidden Sectors Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://na64.web.cern.ch/" style="color:white">CERN SPS/NA64</u></i></td>
+                <td><i><u><a href="https://confluence.slac.stanford.edu/display/hpsg/Heavy+Photon+Search+Experiment" style="color:white">SLAC/HPS</u></i></td>
+                <td><i><u><a href="http://people.roma2.infn.it/~dama/web/home.html" style="color:white">DAMA</u></i></td>
+            </tr>
+        </table>
+        <br>
  
-     <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Neutrinos</b></i></h2>
-       <h4 style="margin-left:5px;color:white">Top Quark Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072245/" style="color:white">Associated Higgs Boson Top-Quark Production ttH→2ℓ+1τhadat s√=13~TeV with ATLAS</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2213094/" style="color:white">Single top quark production measurements in CMS (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071807/" style="color:white">Search for Vector-Like Top Quarks in the CMS detector</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071340/" style="color:white">Inclusive top-quark pair production cross section in pp collisions at \sqrt{s} = 13 TeV in CMS in the dileptonic final state</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072555/" style="color:white">Production of heavy Higgs bosons and decay into top quarks at the LHC (15' + 5')</u></i></td>
-    </tr>
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071326/" style="color:white">Search for Standard Model Production of Four Top Quarks</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072557/" style="color:white">Measurement of top quark properties in single top production (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072277/" style="color:white">Search for scalar top quark production in all hadronic channel</u></i></td>
-       <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072338/"style="color:white">Top quark mass calibration for Monte-Carlo event generators (15' + 5')</u></i></td>
-       <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071321/"style="color:white">First attempt to search for H+ to cbbar in top quark decays at CMS</u></i></td>
-    </tr>
-    </table>
-      <h4 style="margin-left:5px;color:white">Bottom Quark Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071500/"style="color:white">Novel real-time calibration and alignment at LHCb for RunII (20' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072026/"style="color:white">b-hadron production at LHCb (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072525/"style="color:white">Rare leptonic and semileptonic b-hadron decays and Tests of Lepton Flavour Universality at LHCb (10' + 5')</u></i></td>
-    <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072055/"style="color:white">Electroweak scale exotica with LHCb (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071318/"style="color:white">Search for a Standard Model Higgs boson produced in association w a W or Z boson decaying to bottom quarks</u></i></td>
-         </tr>
-     </table>
-    <h4 style="margin-left:5px;color:white">NOvA Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2144798/"style="color:white">Recent Results of Electron-Neutrino Appearance Measurement at NOvA (13' + 2')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2194565/"style="color:white">Neutrino Induced Neutral Current Coherent π^0 Production in The NOvA Near Detector</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072009/"style="color:white">Looking amongst the neutrinos for lightweight dark matter in the NOva Near Dectector</u></i></td>
-        <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071342/"style="color:white">Measurement of c-jet tagging efficiency in ATLAS with W+c-jet events</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071918/"style="color:white">Extrapolation, Systematics and Results for the NOvA Disappearance Analysis</u></i></td>
-         </tr>
-         <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2208753/"style="color:white">Constraints on the Neutrino Flux in NOvA using the Near Detector Data</u></i></td>
-        <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071966/"style="color:white">Systematic Uncertainties in the NOvA Electron Neutrino Appearance Analysis</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072310/"style="color:white">Search for highly-ionizing particles in the NOvA Far Detector</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2144953/"style="color:white">Cross-section Measurements with the NOvA ND</u></i></td>
-        <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072502/"style="color:white">Neutrino Identification with a Convolutional Neural Network in the NOvA Detectors</u></i></td>
-        </tr>
-    </table>
-     <br>
+        <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Neutrinos</b></i></h2>
+        <h4 style="margin-left:5px;color:white">Top Quark Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072245/" style="color:white">Associated Higgs Boson Top-Quark Production ttH→2ℓ+1τhadat s√=13~TeV with ATLAS</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2213094/" style="color:white">Single top quark production measurements in CMS (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071807/" style="color:white">Search for Vector-Like Top Quarks in the CMS detector</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071340/" style="color:white">Inclusive top-quark pair production cross section in pp collisions at \sqrt{s} = 13 TeV in CMS in the dileptonic final state</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072555/" style="color:white">Production of heavy Higgs bosons and decay into top quarks at the LHC (15' + 5')</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071326/" style="color:white">Search for Standard Model Production of Four Top Quarks</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072557/" style="color:white">Measurement of top quark properties in single top production (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072277/" style="color:white">Search for scalar top quark production in all hadronic channel</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072338/"style="color:white">Top quark mass calibration for Monte-Carlo event generators (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071321/"style="color:white">First attempt to search for H+ to cbbar in top quark decays at CMS</u></i></td>
+            </tr>
+        </table>
+        <h4 style="margin-left:5px;color:white">Bottom Quark Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071500/"style="color:white">Novel real-time calibration and alignment at LHCb for RunII (20' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072026/"style="color:white">b-hadron production at LHCb (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072525/"style="color:white">Rare leptonic and semileptonic b-hadron decays and Tests of Lepton Flavour Universality at LHCb (10' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072055/"style="color:white">Electroweak scale exotica with LHCb (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071318/"style="color:white">Search for a Standard Model Higgs boson produced in association w a W or Z boson decaying to bottom quarks</u></i></td>
+            </tr>
+        </table>
+        <h4 style="margin-left:5px;color:white">NOvA Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2144798/"style="color:white">Recent Results of Electron-Neutrino Appearance Measurement at NOvA (13' + 2')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2194565/"style="color:white">Neutrino Induced Neutral Current Coherent π^0 Production in The NOvA Near Detector</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072009/"style="color:white">Looking amongst the neutrinos for lightweight dark matter in the NOva Near Dectector</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071342/"style="color:white">Measurement of c-jet tagging efficiency in ATLAS with W+c-jet events</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071918/"style="color:white">Extrapolation, Systematics and Results for the NOvA Disappearance Analysis</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2208753/"style="color:white">Constraints on the Neutrino Flux in NOvA using the Near Detector Data</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071966/"style="color:white">Systematic Uncertainties in the NOvA Electron Neutrino Appearance Analysis</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072310/"style="color:white">Search for highly-ionizing particles in the NOvA Far Detector</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2144953/"style="color:white">Cross-section Measurements with the NOvA ND</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072502/"style="color:white">Neutrino Identification with a Convolutional Neural Network in the NOvA Detectors</u></i></td>
+            </tr>
+        </table>
+        <br>
      
-      <h2 style="text-align:left;margin-left:5px;color:white"><b><i>SUSY</b></i></h2>
-       <h4 style="margin-left:5px;color:white">LHC Experiments</h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2223633/" style="color:white">Searches for SUSY (25' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2207033/" style="color:white">Search for electroweak production of SUSY at CMS (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072215/" style="color:white">SUSY searches with two opposite-sign same-flavor leptons at CMS</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071810/" style="color:white">Searches for R-Parity violating SUSY with the ATLAS detector (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2219937/" style="color:white">Searches for long lived SUSY particles (10' + 2')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071833/" style="color:white">Prospects for SUSY DM after the LHC Run 1 (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071809/" style="color:white">Searches for SUSY in photons and tau channels with the ATLAS detector (15' + 5')</u></i></td>
-       </tr>
-     </table>
-     <br>
+        <h2 style="text-align:left;margin-left:5px;color:white"><b><i>SUSY</b></i></h2>
+        <h4 style="margin-left:5px;color:white">LHC Experiments</h4>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2223633/" style="color:white">Searches for SUSY (25' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2207033/" style="color:white">Search for electroweak production of SUSY at CMS (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072215/" style="color:white">SUSY searches with two opposite-sign same-flavor leptons at CMS</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071810/" style="color:white">Searches for R-Parity violating SUSY with the ATLAS detector (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2219937/" style="color:white">Searches for long lived SUSY particles (10' + 2')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071833/" style="color:white">Prospects for SUSY DM after the LHC Run 1 (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071809/" style="color:white">Searches for SUSY in photons and tau channels with the ATLAS detector (15' + 5')</u></i></td>
+            </tr>
+        </table>
+        <br>
      
-      <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Exotic States</b></i></h2>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071682/" style="color:white">Production of exotic hadrons and charmonium at Belle/Babar (12' + 3')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072056/" style="color:white">LHCb Exotica and Higgs searches</u></i></td>
-    </tr>
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071638/" style="color:white">Physics potential and prospects at SuperKEKB/Belle II (10' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072154/" style="color:white">Exotic hadrons at the LHC (25' + 5')</u></i></td>
-    </tr>
-    <tr>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072024/" style="color:white">Exotic hadrons at the Tevatron (15' + 5')</u></i></td>
-      <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2223634/" style="color:white">Exotica searches (25' + 5')</u></i></td>
-    </tr>
-         <tr>
-   <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072049/" style="color:white">Exploring the Masses of Exotic Heavy Pentaquarks</u></i></td>
-   <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071584/" style="color:white">Search for exotic decays of the 125 GeV Higgs boson using the CMS detector (15' + 5')</u></i></td>
-         </tr>
-       </table>
+        <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Exotic States</b></i></h2>
+        <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071682/" style="color:white">Production of exotic hadrons and charmonium at Belle/Babar (12' + 3')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072056/" style="color:white">LHCb Exotica and Higgs searches</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071638/" style="color:white">Physics potential and prospects at SuperKEKB/Belle II (10' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072154/" style="color:white">Exotic hadrons at the LHC (25' + 5')</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072024/" style="color:white">Exotic hadrons at the Tevatron (15' + 5')</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/2223634/" style="color:white">Exotica searches (25' + 5')</u></i></td>
+            </tr>
+            <tr>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1072049/" style="color:white">Exploring the Masses of Exotic Heavy Pentaquarks</u></i></td>
+                <td><i><u><a href="https://indico.cern.ch/event/432527/contributions/1071584/" style="color:white">Search for exotic decays of the 125 GeV Higgs boson using the CMS detector (15' + 5')</u></i></td>
+            </tr>
+        </table>
     
-    </body>
-    </html>
+</body>
+</html>

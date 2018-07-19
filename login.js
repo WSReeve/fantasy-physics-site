@@ -25,7 +25,7 @@ function login()
       var errorCode = error.code;
       var errorMessage = error.message;
       // ...
-      window.alert("errorMessage");
+      window.alert("Error: " + errorMessage);
     });
 }
 

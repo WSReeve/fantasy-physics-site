@@ -24,8 +24,15 @@ function login()
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ...
-      window.alert("Error: " + errorMessage);
+     if(errorCode === 'auth/wrong-password')
+      {
+          alert("Wrong password. Try again.");
+      }
+      else
+      {
+          alert(errorMessage);
+      }
+      console.log(error);
     });
 }
 

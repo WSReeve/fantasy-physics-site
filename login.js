@@ -28,6 +28,10 @@ function login()
       {
           alert("Wrong password. Try again.");
       }
+      else if('auth/user-not-found')
+      {
+          alert("No account found. Please sign up.");
+      }
       else
       {
           alert(errorMessage);

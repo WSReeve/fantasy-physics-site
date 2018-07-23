@@ -1,200 +1,182 @@
 <!DOCTYPE html> 
 <html>
-  <head>
-     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
-    authDomain: "fantasy-physics.firebaseapp.com",
-    databaseURL: "https://fantasy-physics.firebaseio.com",
-    projectId: "fantasy-physics",
-    storageBucket: "",
-    messagingSenderId: "735145306132"
-  };
-  firebase.initializeApp(config);
-</script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      </head>
-   <body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
   
-     <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>   
-      </button>
-      <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>   
+        </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="teamrosters.html">Team Rosters</a></li>
-      <li><a href="scoringrubric.html">Scoring Rubric</a></li>
-      <li><a href="joinatournament.html">Join a Tournament</a></li>
-    </ul>
-    
-     <ul class="nav navbar-nav navbar-right">
-       <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-      <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search...">
-        </div> 
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-    </form>
-       </div>
-       
-</nav>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="rules.html">The Game</a></li>
+            <li><a href="teamrosters.html">The Crew</a></li>
+            <li><a href="scoringrubric.html">The Hunt</a></li>
+            <li><a href="joinatournament.html">Join a Tournament</a></li>
+            <li><a href="instructors.html">The Instructors</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div> 
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+        </form>
+      </div>   
     </nav>
      
-     <h1 style="margin-left:5px;color:white">Rules & Definitions<br><br></h1>
+    <h1 style="margin-left:5px;color:white">Rules & Definitions<br><br></h1>
    	<h3 style="margin-left:25px;color:white;font-size:30px;color:white">Definitions</h3>
+    <ul>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>The Executive - </b></i>Contenders of the game</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>EP - </b></i>Event Points</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>GP - </b></i>Game Points</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Tournament - </b></i>A general category of physics that contains many groups of more specific topics</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Tournament Champion - </b></i>The highest degree of “winning” that a User can achieve</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Event - </b></i>A subcategory within a Tournament wherein specific experiments relating to the subcategory are chosen as “Teams”</li>
+        <li style="margin-left:75px;color:white;font-size:22px">This is where all the points for the game are earned</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Preliminary Winner(s) - </b></i>Users who win Events within a Tournament</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Teams - </b></i>Experiments that are selected by Users</li>
+        <li style="margin-left:50px;color:white;font-size:22px"><b><i>Index - </b></i>List of Teams that a User chooses for an Event</li>
+     </ul>
+     <h3 style="margin-left:25px;font-size:30px;color:white">Game Tree</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>User - </b></i>Humans who physically play the game</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>EP - </b></i>Event Points</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>GP - </b></i>Game Points</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Tournament - </b></i>A general category of physics that contains many groups of more specific topics</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Tournament Champion - </b></i>The highest degree of “winning” that a User can achieve</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Event - </b></i>A subcategory within a Tournament wherein specific experiments relating to the subcategory are chosen as “Teams”</li>
-       <li style="margin-left:75px;color:white;font-size:22px">This is where all the points for the game are earned</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Preliminary Winner(s) - </b></i>Users who win Events within a Tournament</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Teams - </b></i>Experiments that are selected by Users</li>
-       <li style="margin-left:50px;color:white;font-size:22px"><b><i>Index - </b></i>List of Teams that a User chooses for an Event</li>
-       </ul>
-    <h3 style="margin-left:25px;font-size:30px;color:white">Game Tree</h3>
-     <ul>
-       <li style="margin-left:50px;color:white;font-size:22px">Game ---> Tournament ---> Event</li>
+         <li style="margin-left:50px;color:white;font-size:22px">Game ---> Tournament ---> Event</li>
      </ul>
      <h3 style="margin-left:25px;font-size:30px;color:white">Game Play Process</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:22px">Users choose a Tournament they would like to participate in</li>
-       <li style="margin-left:50px;color:white;font-size:22px">Users then create an Index for each Event that occurs in the Tournament</li>
-       <li style="margin-left:50px;color:white;font-size:22px">Users then attend their Team’s presentation and score the presentation based on the rubric for that Tournament</li>
-       <li style="margin-left:50px;color:white;font-size:22px">A User wins an Event by earning the most amount of EP</li>
-       <li style="margin-left:50px;color:white;font-size:22px">The Winners of the Events within a Tournament compare their total GP earned </li>
-       <li style="margin-left:75px;color:white;font-size:18px">Whoever holds the most GP is the Tournament Champion</li>
-        <br></ul>
+         <li style="margin-left:50px;color:white;font-size:22px">Users choose a Tournament they would like to participate in</li>
+         <li style="margin-left:50px;color:white;font-size:22px">Users then create an Index for each Event that occurs in the Tournament</li>
+         <li style="margin-left:50px;color:white;font-size:22px">Users then attend their Team’s presentation and score the presentation based on the rubric for that Tournament</li>
+         <li style="margin-left:50px;color:white;font-size:22px">A User wins an Event by earning the most amount of EP</li>
+         <li style="margin-left:50px;color:white;font-size:22px">The Winners of the Events within a Tournament compare their total GP earned </li>
+         <li style="margin-left:75px;color:white;font-size:18px">Whoever holds the most GP is the Tournament Champion</li>
+<br></ul>
      <h1 style="margin-left:5px;color:white">Tournament Rules<br></h1>
-        <h3 style="margin-left:25px;font-size:30px;color:white">What is a Tournament?</h3>
+     <h3 style="margin-left:25px;font-size:30px;color:white">What is a Tournament?</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:25px">A Tournament is the highest tier, with regards to winning, of the game</li>
-       <li style="margin-left:75px;color:white;font-size:22px">It’s a general category of physics within which there are many subcategories (Events)</li> 
-       <li style="margin-left:100px;color:white;font-size:19px">EXAMPLE: <i>Neutrino Tournament</i></li>
-       <li style="margin-left:125px;color:white;font-size:16px">The general category is "Neutrino(s)"</li>
+         <li style="margin-left:50px;color:white;font-size:25px">A Tournament is the highest tier, with regards to winning, of the game</li>
+         <li style="margin-left:75px;color:white;font-size:22px">It’s a general category of physics within which there are many subcategories (Events)</li> 
+         <li style="margin-left:100px;color:white;font-size:19px">EXAMPLE: <i>Neutrino Tournament</i></li>
+         <li style="margin-left:125px;color:white;font-size:16px">The general category is "Neutrino(s)"</li>
      </ul>
-       <h3 style="margin-left:25px;font-size:30px;color:white">Rules of a Tournament</h3>
+     <h3 style="margin-left:25px;font-size:30px;color:white">Rules of a Tournament</h3>
      <ul>
-        <li style="margin-left:50px;color:white;font-size:25px">Users must participate in each Event within a Tournament</li>
-       <li style="margin-left:50px;color:white;font-size:25px">There may be only <i>one</i> winner within each Tournament</li>
+         <li style="margin-left:50px;color:white;font-size:25px">Users must participate in each Event within a Tournament</li>
+         <li style="margin-left:50px;color:white;font-size:25px">There may be only <i>one</i> winner within each Tournament</li>
      </ul>
-           <h3 style="margin-left:25px;font-size:30px;color:white">User Restriction</h3>
+     <h3 style="margin-left:25px;font-size:30px;color:white">User Restriction</h3>
      <ul>
-     <li style="margin-left:50px;color:white;font-size:25px">A Tournament must have at least five (5) Users</li>
-       <li style="margin-left:50px;color:white;font-size:25px">A Tournament may not have more than ten (10) Users</li>
+         <li style="margin-left:50px;color:white;font-size:25px">A Tournament must have at least five (5) Users</li>
+         <li style="margin-left:50px;color:white;font-size:25px">A Tournament may not have more than ten (10) Users</li>
      </ul>
-       <h3 style="margin-left:25px;font-size:30px;color:white">How is a Tournament won?</h3>
+     <h3 style="margin-left:25px;font-size:30px;color:white">How is a Tournament won?</h3>
      <ul>
         <li style="margin-left:50px;color:white;font-size:25px">A Tournament is won by the User who earns the most amount of GP, assuming no required Tie Breaker rounds</li>
      </ul>
-       <h3 style="margin-left:25px;font-size:30px;color:white">Tie Breaker (Amount of GP does not matter here)</h3>
-          <ul>
-     <li style="margin-left:50px;color:white;font-size:25px">Event process(with the exception of attending Team presentations) is repeated between only the preliminary winners</li>
-        <li style="margin-left:75px;color:white;font-size:22px">Using the scores obtained from attending the presentations, the Users compare their scores for each Event and the User whose Team Member, individually, has the highest score wins that event</li>
-        <li style="margin-left:100px;color:white;font-size:19px">EXAMPLE:</li>
-     </ul>
-            <h4 style="text-align:center;color:white"><b><i>Neutrino Tournament</b></i></h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-         <tr>
-           <th><b>Event: </b></th>
-           <th><b>Top Quark Event</b></th>
-           <th><b>Bottom Quark Event</b></th>
-           <th><b>Strange Quark Event</b></th>
-         </tr>
-         <tr>
-           <th rowspan="2">User A: </th>
-           <td>Team 1: 10pts</td>
-           <td>Team 1: 17pts</td>
-           <td>Team 1: 13pts</td>
-         </tr>
-         <tr>
-           <td>Team 2: 6pts</td>
-           <td>Team 2: 5pts</td>
-           <td style="color:rgb(255, 101, 98)">Team 2: 21pts</td>
-         </tr>
-         <tr>
-           <th rowspan="2">User B: </th>
-           <td style="color:rgb(255, 101, 98)">Team 1: 13pts</td>
-           <td>Team 1: 3pts</td>
-           <td>Team 1: 17pts</td>
-         </tr>
-         <tr>
-           <td>Team 2: 2pts</td>
-           <td style="color:rgb(255, 101, 98)">Team 2: 19pts</td>
-           <td>Team 2: 19pts</td>
-         </tr>
-       </table>
+     <h3 style="margin-left:25px;font-size:30px;color:white">Tie Breaker (Amount of GP does not matter here)</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:20px"><i>User B won the most Events and thus, the Tournament</i></li>
-     <li style="margin-left:75px;color:white;font-size:18px">The preliminary winner who wins the most Events is the Tournament Champion</li>
-        <li style="margin-left:100px;color:white;font-size:16px">Tie Breaker is activated, if applicable, until there is only one User left</li>  
+         <li style="margin-left:50px;color:white;font-size:25px">Event process(with the exception of attending Team presentations) is repeated between only the preliminary winners</li>
+         <li style="margin-left:75px;color:white;font-size:22px">Using the scores obtained from attending the presentations, the Users compare their scores for each Event and the User whose Team Member, individually, has the highest score wins that event</li>
+         <li style="margin-left:100px;color:white;font-size:19px">EXAMPLE:</li>
+     </ul>
+     <h4 style="text-align:center;color:white"><b><i>Neutrino Tournament</b></i></h4>
+     <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+     <tr>
+         <th><b>Event: </b></th>
+         <th><b>Top Quark Event</b></th>
+         <th><b>Bottom Quark Event</b></th>
+         <th><b>Strange Quark Event</b></th>
+     </tr>
+     <tr>
+         <th rowspan="2">User A: </th>
+         <td>Team 1: 10pts</td>
+         <td>Team 1: 17pts</td>
+         <td>Team 1: 13pts</td>
+     </tr>
+     <tr>
+         <td>Team 2: 6pts</td>
+         <td>Team 2: 5pts</td>
+         <td style="color:rgb(255, 101, 98)">Team 2: 21pts</td>
+     </tr>
+     <tr>
+         <th rowspan="2">User B: </th>
+         <td style="color:rgb(255, 101, 98)">Team 1: 13pts</td>
+         <td>Team 1: 3pts</td>
+         <td>Team 1: 17pts</td>
+     </tr>
+     <tr>
+         <td>Team 2: 2pts</td>
+         <td style="color:rgb(255, 101, 98)">Team 2: 19pts</td>
+         <td>Team 2: 19pts</td>
+     </tr>
+     </table>
+     <ul>
+         <li style="margin-left:50px;color:white;font-size:20px"><i>User B won the most Events and thus, the Tournament</i></li>
+         <li style="margin-left:75px;color:white;font-size:18px">The preliminary winner who wins the most Events is the Tournament Champion</li>
+         <li style="margin-left:100px;color:white;font-size:16px">Tie Breaker is activated, if applicable, until there is only one User left</li>  
      </ul><br>
-       <h1 style="margin-left:5px;font-size:30px;color:white">Event Rules/Game Play</h1>
+     <h1 style="margin-left:5px;font-size:30px;color:white">Event Rules/Game Play</h1>
      <h3 style="margin-left:25px;font-size:30px;color:white">What is an event?</h3>
-       <ul>
+     <ul>
          <li style="margin-left:50px;color:white;font-size:22px">An Event is the lowest tier, with regards to winning, of the game</li>
          <li style="margin-left:50px;color:white;font-size:22px">It is the subcategory topics within a general category (Tournament)
-           <li style="margin-left:75px;color:white;font-size:20px">EXAMPLE:
+         <li style="margin-left:75px;color:white;font-size:20px">EXAMPLE:
      </ul>
-             <h4 style="text-align:center;color:white"><b><i>Neutrino Tournament</b></i></h4>
-       <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
-         <tr>
-           <th><b>Top Quark Event</b></th>
-           <th><b>Bottom Quark Event</b></th>
-         </tr>
-             </table>
+     <h4 style="text-align:center;color:white"><b><i>Neutrino Tournament</b></i></h4>
+     <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
+     <tr>
+         <th><b>Top Quark Event</b></th>
+         <th><b>Bottom Quark Event</b></th>
+     </tr>
+     </table>
      <h3 style="margin-left:25px;font-size:30px;color:white">Rules of an Event</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:25px">Scoring</li>
-       <li style="margin-left:75px;color:white;font-size:22px">Scoring will take place digitally and is based on a rubric designed for the Tournament being played</li>
-       <li style="margin-left:50px;color:white;font-size:25px">Event Number Restriction</li>
-        <li style="margin-left:75px;color:white;font-size:22px">There must be an ODD number of Events in a Tournament</li>
-       <li style="margin-left:50px;color:white;font-size:25px"><b>Team Rules</b></li>
-       <li style="margin-left:75px;color:white;font-size:22px">Users are restricted in the number of Teams allowed to be added to
+         <li style="margin-left:50px;color:white;font-size:25px">Scoring</li>
+         <li style="margin-left:75px;color:white;font-size:22px">Scoring will take place digitally and is based on a rubric designed for the Tournament being played</li>
+         <li style="margin-left:50px;color:white;font-size:25px">Event Number Restriction</li>
+         <li style="margin-left:75px;color:white;font-size:22px">There must be an ODD number of Events in a Tournament</li>
+         <li style="margin-left:50px;color:white;font-size:25px"><b>Team Rules</b></li>
+         <li style="margin-left:75px;color:white;font-size:22px">Users are restricted in the number of Teams allowed to be added to
          their Index, based on the number of Users and Teams participating in the Event</li>
-       <li style="margin-left:100px;color:white;font-size:19px">The number of teams in a User's Index must be:
-       <li style="margin-left:125px;color:white;font-size:16px">(# of Users) - 2</li>
-       <li style="margin-left:100px;color:white;font-size:19px">An Event must have at least 1.5 times the number of Teams
+         <li style="margin-left:100px;color:white;font-size:19px">The number of teams in a User's Index must be:
+         <li style="margin-left:125px;color:white;font-size:16px">(# of Users) - 2</li>
+         <li style="margin-left:100px;color:white;font-size:19px">An Event must have at least 1.5 times the number of Teams
          per User(# of Teams = (1.5)(# of Users))</li>
-       <li style="margin-left:100px;color:white;font-size:19px">When dealing with an odd number of Users, round the number of Teams up to the nearest integer</li>
-       <li style="margin-left:75px;color:white;font-size:22px">Indexes within an Event may not be identical</li>
-        <li style="margin-left:100px;color:white;font-size:19px">Index likeness is acceptable up to one Team in difference</li>
-       <li style="margin-left:125px;color:white;font-size:16px"><b>Okay</b> - User A's Index: XXXX | User B's Index: XXXO | User C's Index: XXXY</li>
-       <li style="margin-left:125px;color:white;font-size:16px"><b>Not Okay></b> - User A's Index: XXXX | User B's Index: XXXX | User C's Index: XXXO</li>
+         <li style="margin-left:100px;color:white;font-size:19px">When dealing with an odd number of Users, round the number of Teams up to the nearest integer</li>
+         <li style="margin-left:75px;color:white;font-size:22px">Indexes within an Event may not be identical</li>
+         <li style="margin-left:100px;color:white;font-size:19px">Index likeness is acceptable up to one Team in difference</li>
+         <li style="margin-left:125px;color:white;font-size:16px"><b>Okay</b> - User A's Index: XXXX | User B's Index: XXXO | User C's Index: XXXY</li>
+         <li style="margin-left:125px;color:white;font-size:16px"><b>Not Okay></b> - User A's Index: XXXX | User B's Index: XXXX | User C's Index: XXXO</li>
      </ul>
      <h3 style="margin-left:25px;font-size:30px;color:white">How is an Event won?</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:25px">An Event is won by a User whose cumulative EP is the highest</li>
+         <li style="margin-left:50px;color:white;font-size:25px">An Event is won by a User whose cumulative EP is the highest</li>
          <li style="margin-left:50px;color:white;font-size:25px">Winning an Event earns the User 100GP</li>
      </ul>
      <h3 style="margin-left:25px;font-size:30px;color:white">Ties</h3>
      <ul>
-       <li style="margin-left:50px;color:white;font-size:25px">A tie within an Event is settled by evenly distributing 100GP to each winner</li>
+         <li style="margin-left:50px;color:white;font-size:25px">A tie within an Event is settled by evenly distributing 100GP to each winner</li>
      </ul>
      
   
-       
-       
+             
     </body>
     </html>

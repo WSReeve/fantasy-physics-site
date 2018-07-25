@@ -22,15 +22,19 @@
         right: 10px;
         bottom: 10px;
     }
-    html
+    body, html
     {
-        background: url(http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        height: 100%;
+        margin: 0;
+    }
+    .bg
+    {
+        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
         background-size: cover;
     }
-
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +44,7 @@
     <link rel="icon" type="image/png" href="logo3.png">
 </head>
 <body>
+    <div class="bg"></div>
     <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">

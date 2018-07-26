@@ -7,19 +7,30 @@
         right: 10px;
         bottom: 10px;
     }
-    body, html
-    {
-        height: 100%;
+    .image {
+
+      position: absolute;
+
+      width: 100%;
+
+      height: 100%;
+
+      background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
+
+      background-size: cover;
+
     }
-    .bg
-    {
-        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+
+    .content {
+
+      position: absolute;
+
+      top: 100%;
+
+      width: 100%;
+
+      height: 200px;
     }
-</style>
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +39,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="bg">
+    <div class="image">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -55,7 +66,7 @@
         </ul>
       </div>   
       </nav>
-     
+
     <h1 style="margin-left:5px;color:white">Rules & Definitions<br><br></h1>
    	<h3 style="margin-left:25px;color:white;font-size:30px;color:white">Definitions</h3>
     <ul>

@@ -32,10 +32,21 @@
         right: 10px;
         bottom: 10px;
     }
+    body, html
+    {
+        height: 100%;
+    }
+    .bg
+    {
+        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -59,7 +70,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
+<body>
 
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">

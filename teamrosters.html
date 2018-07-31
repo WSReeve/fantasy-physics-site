@@ -8,13 +8,21 @@
         margin: 0;
         padding: 0;
     }
-    .bg
+    .cd-fixed-bg.cd-fixed-bg--1
     {
         background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
     }
 </style>
     <meta charset="utf-8">
@@ -24,7 +32,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="bg">
+    <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -52,6 +60,8 @@
     </div> 
     </nav>
         
+        <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+            <div class="cd-scrolling-bg__content">
         <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Direct Dark Matter</b></i></h2>
         <table class="table table-bordered"style="background-color:rgb(119, 128, 175);color:white">
             <tr>
@@ -78,9 +88,10 @@
             </tr>
         </table>
         <br>
- 
+            </div>
+        </div>
         <h2 style="text-align:left;margin-left:5px;color:white"><b><i>Neutrinos</b></i></h2>
-        <h3 style="margin-left:5px;color:white">PROSPECT</h3>
+        <h3 style="margin-left:5px;color:white"><a href="https://prospect.yale.edu/">PROSPECT</a></h3>
         <p style="margin-left:20px;color:white">PROSPECT is a reactor neutrino experiment at very short baselines to make a precision measurement of the flux and energy 
             spectrum of antineutrinos emitted from nuclear reactors. PROSPECT will search for the oscillation signature of sterile neutrinos and test our understanding of 
             the emission of antineutrinos from the fission products in a nuclear reactor. The measurements of PROSPECT will test our understanding of the Standard Model of 

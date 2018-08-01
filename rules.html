@@ -2,39 +2,29 @@
 <html>
 <head>
 <style> 
-    .background-img
+    .flex-container
     {
-        right: 10px;
-        bottom: 10px;
-    }
-    .footer img
-    {
-        float: right;
-        width: 50px;
+        display: flex;
+        flex-wrap: wrap;
         height: 50px;
-        right: 10px;
-        bottom: 10px;
+        align-items: center;
+        justify-content: space-between;
     }
-    .footer p
+    .cd-fixed-bg.cd-fixed-bg--1
     {
-        position: relative;
-        top: 18px;
-        left: 10px;
-        margin: 0;
-        padding: 0;
+        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
     }
-    body, html
+    .cd-fixed-bg
     {
-        height: 100%;
-    }
-    .parallax
-    {
-        background-image:url('http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg');
-        height: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
+        min-height: 100vh;
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
     }
 </style>
     <meta charset="utf-8">
@@ -44,6 +34,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -70,8 +61,8 @@
         </ul>
       </div>   
       </nav>
- <div class="parallax"></div>
- <div style="background-color:DarkGray">
+ <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+            <div class="cd-scrolling-bg__content">
     <h1 style="margin-left:5px;color:white">Rules & Definitions<br><br></h1>
    	<h3 style="margin-left:25px;font-size:30px;color:white">Definitions</h3>
     <ul>
@@ -86,7 +77,6 @@
         <li style="margin-left:50px;color:white;font-size:22px"><b><i>Teams - </b></i>Experiments that are selected by Users</li>
         <li style="margin-left:50px;color:white;font-size:22px"><b><i>Index - </b></i>List of Teams that a User chooses for an Event</li>
      </ul></div>
-        <div class="parallax"></div>
      <h3 style="margin-left:25px;font-size:30px">Game Tree</h3>
      <ul>
          <li style="margin-left:50px;font-size:22px">Game ---> Tournament ---> Event</li>
@@ -100,7 +90,6 @@
          <li style="margin-left:50px;color:white;font-size:22px">The Winners of the Events within a Tournament compare their total GP earned </li>
          <li style="margin-left:75px;color:white;font-size:18px">Whoever holds the most GP is the Tournament Champion</li>
 <br></ul>
-        <div class="parallax"></div>
      <h1 style="margin-left:5px;color:white">Tournament Rules<br></h1>
      <h3 style="margin-left:25px;font-size:30px;color:white">What is a Tournament?</h3>
      <ul>
@@ -207,11 +196,12 @@
      <ul>
          <li style="margin-left:50px;color:white;font-size:25px">A tie within an Event is settled by evenly distributing 100GP to each winner</li>
      </ul>
-      <div class="parallax"></div>
-   <div class="footer">
-         <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</a> | 
-         <a href="about.html" style="color:white">About</a> | <a href="creators.html" style="color:white">The Creators</a></p>
-     <img src="kansas-jayhawks-profile.jpg"></div>
-       
+   <div class="flex-container">
+             <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
+             <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
+             <img src="kansas-jayhawks-profile.jpg" style="float:right;width:45px;height:45px">
+       </div>
+        </div>
+        </div>
     </body>
     </html>

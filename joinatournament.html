@@ -2,20 +2,29 @@
 <html>
 <head>
 <style>
-    .footer
+    .flex-container
     {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        height: 40px;
-        width: 100%;
-        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
     }
-    .background-img
+    .cd-fixed-bg.cd-fixed-bg--1
     {
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
+        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
     }
 </style>
     <meta charset="utf-8">
@@ -39,8 +48,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
-  
+<body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -75,13 +84,13 @@
     </nav>
         
         
-        <div class="footer">
-         <p>Developed at <a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</a> | 
-         <a href="about.html" style="color:white">About</a> | <a href="creators.html" style="color:white">The Creators</a></p>
-         </div>
-     
-     <div class="background-img">
-     <img src="kansas-jayhawks-profile.jpg" width="50" height="50"></div>
+       <div class="flex-container">
+             <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
+             <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
+             <img src="kansas-jayhawks-profile.jpg" style="float:right;width:40px;height:40px">
+       </div>
+        </div>
+        </div>
         
 </body>
 </html>

@@ -2,37 +2,29 @@
 <html>
 <head>
 <style>
-    .center
+    .flex-container
     {
-        padding: 95px 0;
-        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
     }
-    .footer
-    {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        height: 40px;
-       
-        color: white;
-    }
-    .background-img
-    {
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-    }
-    body, html
-    {
-        height: 100%;
-    }
-    .bg
+    .cd-fixed-bg.cd-fixed-bg--1
     {
         background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
         background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
     }
 </style>
     <meta charset="utf-8">
@@ -43,7 +35,7 @@
     <link rel="icon" type="image/png" href="logo3.png">
 </head>
 <body>
-    <div class="bg">
+    <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -76,14 +68,13 @@
          <h1 style="text-align:center;color:white"><font face="sans-serif"><i> FANTASY PHYSICS <i></h1>
          <h3 style="text-align:center;color:white"><i> ~ unlock the potential ~ </i></h3> 
      </div>    
-     <div class="footer">
-         <i><p>Developed at <u><a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</u></a> | 
-         <u><a href="about.html" style="color:white">About</u></a> | <u><a href="creators.html" style="color:white">The Creators</i></u></a></p>
-     </div>
-     
-     <div class="background-img">
-     <img src="kansas-jayhawks-profile.jpg" width="50" height="50"></div>
-     </div>
+    <div class="flex-container">
+             <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
+             <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
+             <img src="kansas-jayhawks-profile.jpg" style="float:right;width:40px;height:40px">
+       </div>
+        </div>
+        </div>
         
 </body> 
 </html> 

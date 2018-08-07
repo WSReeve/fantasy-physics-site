@@ -1,1 +1,103 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<style>
+    .flex-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cd-fixed-bg.cd-fixed-bg--1
+    {
+        background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
+    }
+    .round1
+    {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 15px;
+    }
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>   
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rules.html">The Game</a></li>
+        <li class="active" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="teamrosters.html">The Crew
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="directdarkmatter.html">Direct Dark Matter Members</a></li>
+          <li><a href="indirectdarkmatter.html">Indirect Dark Matter Members</a></li>
+          <li><a href="neutrinos.html">Neutrino Members</a></li>
+          <li><a href="astroparticle.html">Astroparticle Members</a></li>
+          <li><a href="lhcatlas.html">LHC Atlas Members</a></li>
+          <li><a href="lhccms.html">LHC CMS Members</a></li>            
+        </ul>
+      </li>
+        <li><a href="scoringrubric.html">The Hunt</a></li>
+        <li><a href="joinatournament.html">Join a Tournament</a></li>
+        <li><a href="instructors.html">The Instructors</a></li>
+    </ul>
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+    </div> 
+    </nav>
+        <div class="w3-container">
+        <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+            <div class="cd-scrolling-bg__content">
 
+        <h2 style="color:white"><b><i><u>Indirect Dark Matter</u> Members</b></i></h2>            
+        <h3><a href="http://www-sk.icrr.u-tokyo.ac.jp/sk/index-e.html" style="color:white"><u>Super-Kamiokande</u></a></h3>
+        <p class="round1" style="margin-left:20px;color:white"><font size="3">"SK is a 50 kilo-ton water Cherenkov detector which started operation in 1996. The detector is located in the Kamioka Observatory, 1,000 meters beneath Mt. Ikenoyama in Japan's Gifu Prefecture. 
+            An indirect dark matter search is being performed by SK by looking for neutrinos and neutrino-induced muons from annihilations of WIMPs in the Earth, the sun, and the galaxy's 
+            center and halo. SK has an excellent sensitivity to lower mass weakly interacting massive particles due to its lower neutrino energy threshold."</font></p>
+        <hr>     
+              
+        <div class="flex-container">
+        <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
+        <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
+        <img src="kansas-jayhawks-profile.jpg" style="float:right;width:40px;height:40px">
+       </div>
+       </div>
+       </div>
+       </div>
+</body>
+</html>
+              

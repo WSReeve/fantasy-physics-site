@@ -7,41 +7,44 @@
         padding: 95px 0;
         text-align: center;
     }
-    .flex-container
+    .footer
     {
-        display: flex;
-        flex-wrap: wrap;
-        height: 50px;
-        align-items: center;
-        justify-content: space-between;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 40px;
+       
+        color: white;
     }
-    .cd-fixed-bg.cd-fixed-bg--1
+    .background-img
+    {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+    }
+    body, html
+    {
+        height: 100%;
+    }
+    .bg
     {
         background-image: url("http://hingepesa.ee/wp-content/uploads/2018/04/loomulik-s%C3%BCnnitus.jpg");
-    }
-    .cd-fixed-bg
-    {
-        min-height: 100vh;
-        background-size: cover;
-        background-attachment: fixed;
+        height: 100%;
+        background-position: center;
         background-repeat: no-repeat;
-        background-position: center center;
-    }
-    .cd-scrolling-bg
-    {
-        min-height: 100%;
+        background-size: cover;
     }
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/png" href="logo3.png">
 </head>
 <body>
-    <div class="cd-fixed-bg cd-fixed-bg--1">
+    <div class="bg">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -60,7 +63,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="teamrosters.html">The Crew
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="directdarkmatter.html">WIMP Dark Matter Members</a></li>
+          <li><a href="directdarkmatter.html">Direct Dark Matter Members</a></li>
           <li><a href="indirectdarkmatter.html">Indirect Dark Matter Members</a></li>
           <li><a href="neutrinos.html">Neutrino Members</a></li>
           <li><a href="astroparticle.html">Astroparticle Members</a></li>
@@ -73,30 +76,27 @@
         <li><a href="instructors.html">The Instructors</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>  Sign Up</a></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="signup.html" style="color:white"><span class="glyphicon glyphicon-user"></span>  Sign Up</a></li>
+        <li><a href="login.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
      </div>
      </nav>
-     <div class="w3-container">  
-     <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
-            <div class="cd-scrolling-bg__content">         
+        
      <div class="center">
          <h1 style="text-align:center;color:white"><font face="sans-serif"><i> Welcome </i></h1>
          <h2 style="text-align:center;color:white"><font face="sans-serif"> to </h2>
          <h1 style="text-align:center;color:white"><font face="sans-serif"><i> FANTASY PHYSICS <i></h1>
          <h3 style="text-align:center;color:white"><i> ~ unlock the potential ~ </i></h3> 
-     </div>   
-        <div class="flex-container">             
-       <footer>
-         <i><p style="color:white">Developed at <u><a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</u></a> | 
+     </div>    
+     <div class="w3-container">             
+     <div class="footer">
+         <i><p>Developed at <u><a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</u></a> | 
          <u><a href="about.html" style="color:white">About</u></a> | <u><a href="creators.html" style="color:white">The Creators</i></u></a></p>
-     <img src="kansas-jayhawks-profile.jpg" style="float:right;width:40px;height:40px"></footer></div>
      </div>
-       </div>
-       </div>
-       </div>
-        </div>         
+     
+     <div class="background-img">
+     <img src="kansas-jayhawks-profile.jpg" width="50" height="50"></div>
+     </div></div>
         
 </body> 
 </html> 

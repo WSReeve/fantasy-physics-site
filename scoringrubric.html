@@ -32,10 +32,33 @@
         border-radius: 5px;
         padding: 15px;
     }	
-    #image
+    #top
     {
-	position: fixed; 
-    }
+	width: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	z-index: 999;
+	display: none;
+	cursor: pointer;
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-o-transform: rotate(270deg):
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	background-color: #DDD;
+	color: #555;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;	    
+      }
+      #top:hover
+	{
+		background-color: #DDF;
+		color: #000;
+	}
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -113,10 +136,10 @@
 </table>
   <a href="thehunt.pdf" style="color:white"><u>The Hunt pdf View</u></a>		    
 <br><br><br><br>
+  <a id="top">&#10148;</a>	       
   <div class="flex-container">
              <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
              <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
-             <img src="kansas-jayhawks-profile.jpg" id="image" style="float:right;width:40px;height:40px">
        </div>
         </div>
         </div>

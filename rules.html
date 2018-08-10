@@ -212,17 +212,29 @@
      <ul>
          <li style="margin-left:50px;color:white;font-size:25px">A tie within an Event is settled by evenly distributing 100GP to each winner</li>
      </ul>
-    <a href="thehunt.pdf" style="color:white"><u>The Hunt pdf View</u></a>		    
-    <br><br><br><br>
-    <button type="button" class="btn btn-primary btn-sm" style="float:right" onclick="scrollWin()">
-          <span class="glyphicon glyphicon-arrow-up"></span> Top
-    </button>	       	
     <script>
-       function scrollWin()
-       {
-       	     window.scrollTo(0, 0);
-       }
-    </script>      
+    $(document).ready(function(){
+
+	var elm_class = '.gotop'; // Adjust this accordingly. 
+
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 300) { // 300px from top
+			$(elm_class).fadeIn();
+		} else {
+			$(elm_class).fadeOut();
+		}
+	});
+
+	//Click event to scroll to top
+	$(elm_class).click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+
+});
+</script>
+So, just add an element to the body, set a class, set it to fixed posi
    <div class="flex-container">
              <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
              <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>

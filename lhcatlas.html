@@ -41,6 +41,26 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #myBtn
+    {
+        display: none; 
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: #428bca;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+     }
+     #myBtn:hover
+	{
+		background-color: #555;
+	}
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,6 +105,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <a href="https://ku.edu/" class="navbar-right"><img src="kansas-jayhawks-profile.jpg" style="width:45px;height:51px"></a>
     </ul>
     </div> 
     </nav>
@@ -123,10 +144,31 @@
             <a href="https://admission.wsu.edu/academics/fos/Public/field.castle?id=7860" style="color:black">"<u>Instrumentation</u></a> physics is directed toward working in government and industrial laboratories, where the ability to use and modify complex
                 electronic and mechanical equipment is high valued."</font></p>
       <div class="parallax"></div>
+            
+       <button id="myBtn" onclick="topFunction()">
+	   <span class="glyphicon glyphicon-arrow-up"></span> Top </button>   	    
+   	   <script>
+	   window.onscroll = function() {scrollFunction()};
+	   function scrollFunction()
+	   {
+		   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+		   {
+			   document.getElementById("myBtn").style.display = "block";
+		   }
+		   else
+		   {
+			   document.getElementById("myBtn").style.display = "none";
+		   }
+	   }
+	   function topFunction()
+	   {
+		   document.body.scrollTop = 0;
+		   document.documentElement.scrollTop = 0;
+	   }
+	    </script>
       <div class="flex-container">
              <p style="color:black">Developed at <a href="http://physics.ku.edu/" style="color:black"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
              <a href="about.html" style="color:black"><u>About</u></a> | <a href="creators.html" style="color:black"><u>The Creators</u></a></p>
-             <img src="kansas-jayhawks-profile.jpg" style="float:right;width:40px;height:40px">
        </div>
        </div>
        </div>

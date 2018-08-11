@@ -1,63 +1,108 @@
 <!DOCTYPE html> 
 <html>
-  <head>
-        <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
-    authDomain: "fantasy-physics.firebaseapp.com",
-    databaseURL: "https://fantasy-physics.firebaseio.com",
-    projectId: "fantasy-physics",
-    storageBucket: "",
-    messagingSenderId: "735145306132"
-  };
-  firebase.initializeApp(config);
-</script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         </head>
-   <body style="background-image:url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d8c03c98f431a4dbbfb5f93962fa44e7&w=1000&q=80)">
-  
-     <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+<head>
+<style>
+    .flex-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cd-fixed-bg.cd-fixed-bg--1
+    {
+        background-image: url("https://stmed.net/sites/default/files/galaxy-wallpapers-30826-4174257.jpg");
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
+    }
+    .round1
+    {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    #myBtn
+    {
+        display: none; 
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: #428bca;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+     }
+     #myBtn:hover
+	{
+		background-color: #555;
+	}
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>   
-      </button>
-      <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rules.html">Rules</a></li>
-      <li><a href="teamrosters.html">Team Rosters</a></li>
-      <li><a href="scoringrubric.html">Scoring Rubric</a></li>
-      <li><a href="joinatournament.html">Join a Tournament</a></li>
+    <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rules.html">The Game</a></li>
+        <li class="active" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="teamrosters.html">The Crew
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="directdarkmatter.html">Direct Dark Matter Members</a></li>
+          <li><a href="indirectdarkmatter.html">Indirect Dark Matter Members</a></li>
+          <li><a href="neutrinos.html">Neutrino Members</a></li>
+          <li><a href="astroparticle.html">Astroparticle Members</a></li>
+          <li><a href="lhcatlas.html">LHC Atlas Members</a></li>
+          <li><a href="lhccms.html">LHC CMS Members</a></li>            
+        </ul>
+      </li>
+        <li><a href="scoringrubric.html">The Hunt</a></li>
+        <li><a href="joinatournament.html">Join a Tournament</a></li>
+        <li><a href="instructors.html">The Instructors</a></li>
     </ul>
     
-     <ul class="nav navbar-nav navbar-right">
-       <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <a href="https://ku.edu/" class="navbar-right"><img src="kansas-jayhawks-profile.jpg" style="width:45px;height:51px"></a>
     </ul>
-      <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search...">
-        </div> 
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
-    </form>
-       </div>
-       
-</nav>
+    </div> 
     </nav>
+        <div class="w3-container">
+        <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+            <div class="cd-scrolling-bg__content">
      
      <h1 style="text-align:center;color:white"><b><i> About Fantasy Physics </b></i></h1><br>
      <h3 style="margin-left:5px;font-size:30px;color:white">What is "Fantasy Physics"?</h3>
@@ -73,7 +118,34 @@
       <h3 style="margin-left:5px;font-size:30px;color:white">Contact Us</h3>
      <p style="text-indent:40px;margin-left:5px;color:white;font-size:22px">TBD</p>     
 
-     
+     <button id="myBtn" onclick="topFunction()">
+	   <span class="glyphicon glyphicon-arrow-up"></span> Top </button>   
+   	   <script>
+	   window.onscroll = function() {scrollFunction()};
+	   function scrollFunction()
+	   {
+		   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+		   {
+			   document.getElementById("myBtn").style.display = "block";
+		   }
+		   else
+		   {
+			   document.getElementById("myBtn").style.display = "none";
+		   }
+	   }
+	   function topFunction()
+	   {
+		   document.body.scrollTop = 0;
+		   document.documentElement.scrollTop = 0;
+	   }
+	    </script>
+       <div class="flex-container">
+             <p style="color:white">Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> | 
+             <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a></p>
+       </div>
+       </div>
+       </div>
+       </div>
      
     
     </body>

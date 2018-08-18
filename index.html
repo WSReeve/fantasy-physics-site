@@ -2,19 +2,13 @@
 <html>
 <head>
 <style>
-    .center
+    .flex-container
     {
-        padding: 95px 0;
-        text-align: center;
-    }
-    .footer
-    {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        height: 40px;
-       
-        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
     }
     .background-img
     {
@@ -78,6 +72,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a href="signup.html" style="color:white"><span class="glyphicon glyphicon-user"></span>  Sign Up</a></li>
         <li><a href="login.html" style="color:white"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <a href="https://ku.edu/" class="navbar-right"><img src="kansas-jayhawks-profile.jpg" style="width:45px;height:51px"></a>
     </ul>
      </div>
      </nav> 
@@ -87,19 +82,11 @@
          <h1 style="text-align:center;color:white"><font face="sans-serif"><i> FANTASY PHYSICS <i></h1>
          <h3 style="text-align:center;color:white"><i> ~ unlock the potential ~ </i></h3> 
      </div>                 
-     <div class="footer">
+     <div class="flex-container">
          <i><p style="margin-left:8px">Developed at <u><a href="http://physics.ku.edu/" style="color:white"> The University of Kansas - Physics & Astronomy Department</u></a> | 
          <u><a href="about.html" style="color:white">About</u></a> | <u><a href="creators.html" style="color:white">The Creators</i></u></a></p>
      </div>
-     
-     <div class="background-img">
-     <img src="kansas-jayhawks-profile.jpg" width="50" height="50"></div>
-     </div></div>
-             
-             
-             
-       <script src="joinatournamentchecklogin.js"></script>
-             
+     </div></div>        
              
         
 </body> 

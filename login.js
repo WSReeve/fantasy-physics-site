@@ -1,12 +1,12 @@
 firebase.auth().onAuthStateChanged(function(user)
 {
-  if (user) 
+  if (user)
   {
-      // User is signed in 
+      // User is signed in
       document.getElementById("user_div").style.display = "block";
       document.getElementById("login_div").style.display = "none";
-  } 
-  else 
+  }
+  else
   {
       // User is not signed in
       document.getElementById("user_div").style.display = "none";
@@ -19,7 +19,7 @@ function login()
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
 
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) 
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error)
     {
       // Handle Errors here.
       var errorCode = error.code;
@@ -44,7 +44,7 @@ function signup()
 {
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
-  
+
     firebase.auth().createUserWithEmailAndPassword(userEmail, userPass).catch(function(error)
     {
         // Handle Errors here.
@@ -71,10 +71,10 @@ function signup()
 
 function logout()
 {
-    firebase.auth().signOut().then(function() 
+    firebase.auth().signOut().then(function()
     {
         // Sign-out successful.
-    }).catch(function(error) 
+    }).catch(function(error)
     {
         // An error happened.
     });

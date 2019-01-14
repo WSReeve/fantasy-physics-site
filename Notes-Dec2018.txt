@@ -1,0 +1,14 @@
+Experiment totals
+
+Excel website visual - table 
+	- normalize (maybe) 
+
+interface and how user interacts w/ it (database) 
+	- how many points in a session
+	- overall season score (dropdown leaderboards and scores)
+	- scores in these conferences or conf. in a certain month 
+
+Leaderboard over a "season"/meetings 
+
+
+

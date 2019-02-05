@@ -10,5 +10,12 @@ interface and how user interacts w/ it (database)
 
 Leaderboard over a "season"/meetings 
 
+Score ICHEP 2018
+
+LEPTON
+
+Put # of talks for each experiment w/ scores
+
+Restrictions from how many from each category 
 
 

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .flex-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cd-fixed-bg.cd-fixed-bg--1
+    {
+        background-image: url("https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
+    }
+    .round1
+    {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    #myBtn
+    {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: #428bca;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+     }
+     #myBtn:hover
+     {
+        background-color: #555;
+     }
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
+            authDomain: "fantasy-physics.firebaseapp.com",
+            databaseURL: "https://fantasy-physics.firebaseio.com",
+            projectId: "fantasy-physics",
+            storageBucket: "",
+            messagingSenderId: "735145306132"
+            };
+            firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="tournamentlogin.js"></script>
+</head>
+<body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+    </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">The Game</a></li>
+                 <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="teamrosters.html">The Crew
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="directdarkmatter.html">WIMP Dark Matter Members</a></li>
+          <li><a href="indirectdarkmatter.html">Indirect Dark Matter and Astroparticle Members</a></li>
+          <li><a href="neutrinos.html">Neutrino Members</a></li>
+          <li><a href="lhcatlas.html">LHC Atlas Members</a></li>
+          <li><a href="lhccms.html">LHC CMS Members</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="joinatournament.html">Join a Tournament
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="conf.html">Conferences
+           <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="pastconf.html">Past Conferences</a></li>
+             <li><a href="upcomingconf.html">Upcoming Conferences</a></li>
+           </ul>
+         </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="instructors.html">The Instructors</a></li>
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="w3-container">
+    <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+    <div class="cd-scrolling-bg__content">
+
+    <h2 style="color:white"><b><i>WIMP Direct Dark Matter Members</i></b></h2>
+    <table colspan="3" class="table table-bordered" style="color:white">
+        <tr>
+            <th scope="col" style="text-align:center">LUX-ZEPLIN (LZ): 5.5 points</th>
+            <th scope="col" style="text-align:center">ArDM (Argon Dark Matter Experiment): 0 points</th>
+            <th scope="col" style="text-align:center">XMASS: 0 points</th>
+            <th scope="col" style="text-align:center">XENON: 0 points</th>
+        </tr>
+        <tr>
+            <th scope="col" style="text-align:center">PICASSO: 0 points</th>
+            <th scope="col" style="text-align:center">LUX: 4.167 points</th>
+            <th scope="col" style="text-align:center">PICO: 5 points</th>
+            <th scope="col" style="text-align:center">COSINE-100: 5 points</th>
+        </tr>
+        <tr>
+            <th scope="col" style="text-align:center">EDELWEISS: 0 points</th>
+            <th scope="col" style="text-align:center">DarkSide: 4 points</th>
+            <th scope="col" style="text-align:center">CRESST: 0 points</th>
+            <th scope="col" style="text-align:center">DEAP-3600: 0 points</th>
+        </tr>
+        <tr>
+            <th scope="col" style="text-align:center">SuperCDMS: 0 points</th>
+            <th scope="col" style="text-align:center">DARWIN: 0 points</th>
+            <th scope="col" style="text-align:center">CoGeNT: 0 points</th>
+            <th scope="col" style="text-align:center">COUPP-60: 0 points</th>
+        </tr>
+    </table><br>
+    <h2 style="color:white"><b><i>Indirect Dark Matter and Astroparticle Members</i></b></h2>
+    <table colspan="3" class="table table-bordered" style="color:white">
+        <tr>
+            <th style="text-align:center">Super-Kamiokande: 5 points</th>
+            <th style="text-align:center">PAMELA: 0 points</th>
+            <th style="text-align:center">MAGIC Telescopes: 0 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">HESS: 0 points</th>
+            <th style="text-align:center">HPS: 0 points</th>
+            <th style="text-align:center">GAPS: 0 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">FGST-LAT: 0 points</th>
+            <th style="text-align:center">CTA: 0 points</th>
+            <th style="text-align:center">AMS: 0 points</th>
+        </tr>
+            <tr>
+                <th style="text-align:center">KATRIN: 4 points</th>
+                <th colspan="2" style="text-align:center">IceCube: 6.308 points</th>
+            </tr>
+            <tr>
+                <th style="text-align:center">MeV Gamma-ray: 0 points</th>
+                <th colspan="2" style="text-align:center">ADMX (The Axion Dark Matter eXperiment): 6.167 points</th>
+            </tr>
+            <tr>
+                <th style="text-align:center">CERN Axion Solar Telescope: 0 points</th>
+                <th colspan="2" style="text-align:center">ANTARES: 0 points</th>
+            </tr>
+        </table><br>
+    <br>
+    <h2 style="color:white"><b><i>Neutrino Members</i></b></h2>
+    <table colspan="3" class="table table-bordered" style="color:white">
+        <tr>
+            <th style="text-align:center">PROSPECT: 5.4 points</th>
+            <th style="text-align:center">NOvA: 7.077 points</th>
+            <th style="text-align:center">MicroBooNE: 5 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">COHERENT: 6.4 points</th>
+            <th style="text-align:center">JUNO: 4 points</th>
+            <th style="text-align:center">DUNE: 5.545 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">MINOS: 0 points</th>
+            <th style="text-align:center">BOREXINO: 0 points</th>
+            <th style="text-align:center">MiniBooNE: 3.5 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">ICARUS: 4 points</th>
+            <th colspan="2" style="text-align:center">T2K: 0 points</th>
+        </tr>
+    </table><br>
+
+    <h2 style="color:white"><b><i>LHC Members</i></b></h2>
+    <table colspan="3" class="table table-bordered" style="color:white">
+        <tr>
+            <th style="text-align:center">The Standard Model at Atlas: 0 points</th>
+            <th style="text-align:center">Higgs Physics at Atlas: 7.25 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">Supersymmetry at Atlas: 9 points</th>
+            <th style="text-align:center">Exotica at Atlas: 8 points</th>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align:center">Research & Development, Upgrades, Detector Operation, & Instrumentation at Atlas: 6.833 points</th>
+        </tr>
+        </table><br>
+        <table colspan="3" class="table table-bordered" style="color:white">
+        <tr>
+            <th style="text-align:center">The Standard Model at CMS: 7.667 points</th>
+            <th style="text-align:center">Higgs Physics at CMS: 8.25 points</th>
+        </tr>
+        <tr>
+            <th style="text-align:center">Supersymmetry at CMS: 7.75 points</th>
+            <th style="text-align:center">Exotica at CMS: 7.444 points</th>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align:center">Research & Development, Upgrades, Detector Operation, & Instrumentation at CMS: 7.5 points</th>
+        </tr>
+    </table><br>
+
+
+
+    <button id="myBtn" onclick="topFunction()">
+    <span class="glyphicon glyphicon-arrow-up"></span> Top </button>
+    <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction()
+    {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+        {
+            document.getElementById("myBtn").style.display = "block";
+        }
+        else
+        {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    function topFunction()
+    {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+     </script>
+    <div class="flex-container">
+          <p style="color:white"><i>Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> |
+          <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a> | &copy; 2018</i></p>
+   </div>
+   </div>
+
+   </body>
+   </html>

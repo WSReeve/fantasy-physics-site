@@ -34,9 +34,18 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .delay
+    {
+        animation-delay: 5s;
+    }
+    .delay2
+    {
+        animation-delay: 10s;
+    }
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -64,16 +73,19 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="directdarkmatter.html">WIMP Dark Matter Members</a></li>
-          <li><a href="indirectdarkmatter.html">Indirect Dark Matter Members</a></li>
+          <li><a href="indirectdarkmatter.html">Indirect Dark Matter and Astroparticle Members</a></li>
           <li><a href="neutrinos.html">Neutrino Members</a></li>
-          <li><a href="astroparticle.html">Astroparticle Members</a></li>
           <li><a href="lhcatlas.html">LHC Atlas Members</a></li>
           <li><a href="lhccms.html">LHC CMS Members</a></li>
         </ul>
       </li>
-        <li><a href="scoringrubric.html">The Hunt</a></li>
-        <li><a href="joinatournament.html">Join a Tournament</a></li>
-        <li><a href="instructors.html">The Instructors</a></li>
+      <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="joinatournament.html">Join a Tournament
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                </ul>
+            </li>
         <li class="dropdown">
        <a class="dropdown-toggle" data-toggle="dropdown" href="conf.html">Conferences
        <span class="caret"></span></a>
@@ -84,20 +96,25 @@
      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+        <li><a href="instructors.html">The Instructors</a></li>
         <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span>  Sign Up</a></li>
         <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <a href="https://ku.edu/" class="navbar-right"><img src="kansas-jayhawks-profile.jpg" style="width:45px;height:51px"></a>
     </ul>
      </div>
      </nav>
 
-
-     <!--
+<div class="w3-container"
      <div class="center">
+         <div class="delay">
+         <!--
          <h1 style="text-align:center;color:white"><font face="sans-serif"><i> Welcome </i></h1>
-         <h2 style="text-align:center;color:white"><font face="sans-serif"> to </h2> --> <br><br><br>
-         <h1 style="text-align:center;color:white"><font face="sans-serif"><i> FANTASY PHYSICS <i></h1>
+         <h2 style="text-align:center;color:white"><font face="sans-serif"> to </h2><br><br><br> -->
+         <h1 class="w3-center w3-animate-bottom" style="text-align:center;color:white"><font face="sans-serif"><i> FANTASY PHYSICS <i></h1>
+         </div>
+         <div class="delay2">
          <h3 style="text-align:center;color:white"><i> ~ unlock the potential ~ </i></h3>
+        </div>
+</div>
 
 
 

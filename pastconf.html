@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .flex-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .cd-fixed-bg.cd-fixed-bg--1
+    {
+        background-image: url("https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+    .cd-fixed-bg
+    {
+        min-height: 100vh;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .cd-scrolling-bg
+    {
+        min-height: 100%;
+    }
+    .round1
+    {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    #myBtn
+    {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        font-size: 13px;
+        border: none;
+        outline: none;
+        background-color: #428bca;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+     }
+     #myBtn:hover
+     {
+        background-color: #555;
+     }
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDDolu-qeP-GifEf8DTWmrwHcVG1Kzpwwg",
+            authDomain: "fantasy-physics.firebaseapp.com",
+            databaseURL: "https://fantasy-physics.firebaseio.com",
+            projectId: "fantasy-physics",
+            storageBucket: "",
+            messagingSenderId: "735145306132"
+            };
+            firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="tournamentlogin.js"></script>
+</head>
+<body>
+    <div class="cd-fixed-bg cd-fixed-bg--1">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Fantasy Physics</a>
+    </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">The Game</a></li>
+                 <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="teamrosters.html">The Crew
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="directdarkmatter.html">WIMP Dark Matter Members</a></li>
+          <li><a href="indirectdarkmatter.html">Indirect Dark Matter and Astroparticle Members</a></li>
+          <li><a href="neutrinos.html">Neutrino Members</a></li>
+          <li><a href="lhcatlas.html">LHC Atlas Members</a></li>
+          <li><a href="lhccms.html">LHC CMS Members</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="joinatournament.html">Join a Tournament
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="conf.html">Conferences
+           <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="pastconf.html">Past Conferences</a></li>
+             <li><a href="upcomingconf.html">Upcoming Conferences</a></li>
+           </ul>
+         </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="instructors.html">The Instructors</a></li>
+            <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="w3-container">
+    <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
+    <div class="cd-scrolling-bg__content">
+
+    <iframe width="700" height="550" frameborder="0" scrolling="no" src="https://kansas-my.sharepoint.com/personal/l130d568_home_ku_edu/_layouts/15/Doc.aspx?sourcedoc={86f4002a-9770-41bb-b3ed-4d08c82a4695}&action=embedview&wdAllowInteractivity=False&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+
+        <button id="myBtn" onclick="topFunction()">
+        <span class="glyphicon glyphicon-arrow-up"></span> Top </button>
+        <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction()
+        {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+            {
+                document.getElementById("myBtn").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        function topFunction()
+        {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+         </script>
+        <div class="flex-container">
+              <p style="color:white"><i>Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> |
+              <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a> | &copy; 2018</i></p>
+       </div>
+       </div>
+
+       </body>
+       </html>

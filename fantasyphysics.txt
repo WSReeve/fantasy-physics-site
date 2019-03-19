@@ -1,0 +1,58 @@
+Will need an automated random team generator to pit crew against crew
+
+Should be able to trade/bench members 
+
+
+Physics related: 
+	Unlocking things to keep interest all year long 
+
+set of teams exist outside a particular conference/tournament
+
+	LHCb:
+		
+Neutrino Experiments: (Neutrino mass and oscillation) 
+	MiniBooNE, LSND, MicroBooNE, ICARUS-T600, SBND(operational in 2020),
+	JSNS2, PROSPECT, STEREO, DANSS, CHANDLER, SOLID, T2K, NOVA, Daya Bay Reactor,
+	KATRIN, Project 8, CUORE, Majorana Demonstrator, GERDA, NEXT, KamLAND-Zen 800,
+	Standard Model fitness test) COHERENT, JUNO, DUNE, OPERA, Helium & Lead Observatory
+	MINOS,
+
+Astroparticle Physics Experiments:
+	IceCube, ANTARES, BOREXINO, Pierre Auger Observatory(ultra-high-energy cosmic rays), 
+	CERN Axion Solar Telescope, NESTOR Project, Super Kamiokande-II-III, 
+	KamLand, CLIO, KAGRA, Laboratori Nazionali del Gran Sasso (COBRA, CUORE, GALLEX/GNO, 
+	LVD, MACRO, AMS, BOREX, CTA, DARKSIDE, ENUBET, 
+	EUCLID, Fermi, Gammamev, G-Gransasso-RD, Gerda, IXPE-INFN, JUNO, KM3, LARASE, LIMADOU_CSN2, 
+	LISA, LSPE, MAGIA-ADV, MOONLIGHT2, SABRE, SUPREMO, VIRGO,
+
+Dark Matter: 
+	DAMIC, PICO 2L, PICO-60, DEAP-3600, MiniCLEAN, DAMIC100, XENON
+Hidden Sector --> like Jeopardy "catch-all," misc. 
+
+
+Quick Fire League for one-shot and an entire "season" 
+
+List of teams outside of league, don't correspond to talks 
+  
+Promote more universal gameplay 
+
+A demo of gameplay 
+
+Make "about" section longer 
+
+Resources about physics, higgs boson, etc
+
+
+Rules/Format:
+
+   - in addition to "single tournament", "league"/longer-term gameplay
+
+Presentation/Formatting:
+
+   - more pictures (esp. when explaining rules)
+
+
+Overall:
+   - label for experiments
+   - label for categories
+

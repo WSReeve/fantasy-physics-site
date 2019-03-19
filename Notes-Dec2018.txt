@@ -12,9 +12,7 @@ Leaderboard over a "season"/meetings
 
 Score ICHEP 2018
 
-LEPTON
-
-Put # of talks for each experiment w/ scores
+LEPTON Conference
 
 Restrictions from how many from each category 
 

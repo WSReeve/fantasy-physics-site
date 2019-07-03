@@ -12,7 +12,7 @@
     }
     .cd-fixed-bg.cd-fixed-bg--1
     {
-        background-image: url("https://cdn.pixabay.com/photo/2015/04/02/08/13/universe-703522_1280.jpg");
+        background-image: url("https://cdn.pixabay.com/photo/2017/08/07/21/52/nature-2608274_1280.jpg");
     }
     .cd-fixed-bg
     {
@@ -52,6 +52,14 @@
      {
         background-color: #555;
      }
+     th, td
+     {
+         text-align: center;
+     }
+.vertical-text
+{
+	transform: rotate(270deg);
+}
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +85,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="tournamentlogin.js"></script>
 </head>
-<body>
+<body onload="myFunction()">
     <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -129,51 +137,3 @@
             <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </nav>
-
-
-    <div class="w3-container">
-    <div class="cd-scrolling-bg cd-scrolling-bg--color-2">
-    <div class="cd-scrolling-bg__content">
-
-    <h4><a href="https://www.aps.org/meetings/baps/april18.cfm"><u style="color:white"> 1. April APS Meeting 2018 </u></h4></a>
-    <img class="left" src="https://www.aps.org/meetings/april/images/AM18_MeetingsPage_updated.png"></img>
-
-    <hr>
-
-    <h4><a href="https://www.ichep2018.org/"><u style="color:white"> 2. ICHEP Meeting 2018 </u></h4></a>
-    <img class="left" src="https://www.mdpi.com/img/misc/event_1508111564971.png"></img><br>
-        <h5 style="color:white">"ICHEP is a series of international conferences that has been held every two years for more than 50 years, and is the reference conference of particle physics where most relevant results are presented.
-            At ICHEP, physicists from around the world gather to share the latest advancements in particle physics, astrophysics/cosmology, and accelerator science and discuss plans for major future facilities."</h5>
-
-    <hr>
-
-
-        <button id="myBtn" onclick="topFunction()">
-        <span class="glyphicon glyphicon-arrow-up"></span> Top </button>
-        <script>
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction()
-        {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-            {
-                document.getElementById("myBtn").style.display = "block";
-            }
-            else
-            {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-        function topFunction()
-        {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-         </script>
-        <div class="flex-container">
-              <p style="color:white"><i>Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> |
-              <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a> | &copy; 2018</i></p>
-       </div>
-       </div>
-
-       </body>
-       </html>

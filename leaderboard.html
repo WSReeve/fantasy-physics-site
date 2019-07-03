@@ -52,6 +52,14 @@
      {
         background-color: #555;
      }
+     th, td
+     {
+         text-align: center;
+     }
+.vertical-text
+{
+	transform: rotate(270deg);
+}
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +85,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="tournamentlogin.js"></script>
 </head>
-<body>
+<body onload="myFunction()">
     <div class="cd-fixed-bg cd-fixed-bg--1">
     <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -109,6 +117,7 @@
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="joinatournament.html">Join a Tournament</a></li>
+                    <li><a href="pasttourn.html">Past Tournaments</a></li>
                     <li><a href="leaderboard.html">Leaderboard</a></li>
                 </ul>
             </li>
@@ -135,115 +144,379 @@
     <div class="cd-scrolling-bg__content">
 
     <h2 style="color:white"><b><i>WIMP Direct Dark Matter Members</i></b></h2>
-    <table colspan="3" class="table table-bordered" style="color:white">
+    <table class="table table-bordered rowsum" style="color:white">
         <tr>
-            <th scope="col" style="text-align:center">LUX-ZEPLIN (LZ): 12.5 points</th>
-            <th scope="col" style="text-align:center">ArDM (Argon Dark Matter Experiment): 0 points</th>
-            <th scope="col" style="text-align:center">XMASS: 8 points</th>
-            <th scope="col" style="text-align:center">XENON: 13.33 points</th>
+          <th style="text-align:center">Experiment</th>
+          <th style="text-align:center">APS April '18</th>
+          <th style="text-align:center">ICHEP '18</th>
+          <th style="text-align:center">APS April '19</th>
+          <th style="text-align:center">Total Points</th>
         </tr>
         <tr>
-            <th scope="col" style="text-align:center">PICASSO: 0 points</th>
-            <th scope="col" style="text-align:center">LUX: 10.567 points</th>
-            <th scope="col" style="text-align:center">PICO: 19 points</th>
-            <th scope="col" style="text-align:center">COSINE-100: 13 points</th>
+          <td>LUX-ZEPLIN</td>
+          <td><span class='hours'>5.5</span></td>
+          <td><span class='hours'>7</span></td>
+          <td><span class='hours'>0</span></td>
+          <td>Print Sum of duration of this Row</td>
         </tr>
         <tr>
-            <th scope="col" style="text-align:center">EDELWEISS: 0 points</th>
-            <th scope="col" style="text-align:center">DarkSide: 17.5 points</th>
-            <th scope="col" style="text-align:center">CRESST: 8 points</th>
-            <th scope="col" style="text-align:center">DEAP-3600: 7 points</th>
+          <td>ArDM</td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>0</span></td>
+          <td>Print Sum of duration of this Row</td>
         </tr>
         <tr>
-            <th scope="col" style="text-align:center">SuperCDMS: 6.8 points</th>
-            <th scope="col" style="text-align:center">DARWIN: 0 points</th>
-            <th scope="col" style="text-align:center">CoGeNT: 0 points</th>
-            <th scope="col" style="text-align:center">COUPP-60: 0 points</th>
+          <td>XMASS</td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>8</span></td>
+          <td><span class='hours'>0</span></td>
+          <td>Print Sum of duration of this Row</td>
         </tr>
+        <tr>
+          <td>XENON</td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>7</span></td>
+          <td><span class='hours'>6.33</span></td>
+          <td>Print Sum of duration of this Row</td>
+        </tr>
+        <tr>
+          <td>PICASSO</td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>0</span></td>
+          <td><span class='hours'>0</span></td>
+          <td>Print Sum of duration of this Row</td>
+          <tr>
+            <td>LUX</td>
+            <td><span class='hours'>4.17</span></td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>6.4</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>PICO</td>
+            <td><span class='hours'>5</span></td>
+            <td><span class='hours'>7</span></td>
+            <td><span class='hours'>7</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>COSINE-100</td>
+            <td><span class='hours'>5</span></td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>8</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>DarkSide</td>
+            <td><span class='hours'>4</span></td>
+            <td><span class='hours'>6.5</span></td>
+            <td><span class='hours'>7</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>CRESST</td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>8</span></td>
+            <td><span class='hours'>0</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>DEAP</td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>7</span></td>
+            <td><span class='hours'>0</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>SuperCDMS</td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>6.8</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
     </table><br>
+
     <h2 style="color:white"><b><i>Indirect Dark Matter and Astroparticle Members</i></b></h2>
-    <table colspan="3" class="table table-bordered" style="color:white">
-        <tr>
-            <th style="text-align:center">Super-Kamiokande: 12 points</th>
-            <th style="text-align:center">PAMELA: 0 points</th>
-            <th style="text-align:center">MAGIC Telescopes: 0 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">HESS: 0 points</th>
-            <th style="text-align:center">HPS: 0 points</th>
-            <th style="text-align:center">GAPS: 7 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">FGST-LAT: 0 points</th>
-            <th style="text-align:center">CTA: 0 points</th>
-            <th style="text-align:center">AMS: 7 points</th>
-        </tr>
-            <tr>
-                <th style="text-align:center">KATRIN: 20 points</th>
-                <th colspan="2" style="text-align:center">IceCube: 21.808 points</th>
-            </tr>
-            <tr>
-                <th style="text-align:center">MeV Gamma-ray: 6.5 points</th>
-                <th colspan="2" style="text-align:center">ADMX (The Axion Dark Matter eXperiment): 12.167 points</th>
-            </tr>
-            <tr>
-                <th style="text-align:center">CERN Axion Solar Telescope: 0 points</th>
-                <th colspan="2" style="text-align:center">ANTARES: 5 points</th>
-            </tr>
-        </table><br>
-    <br>
+    <table class="table table-bordered rowsum" style="color:white">
+      <tr>
+        <th style="text-align:center">Experiment</th>
+        <th style="text-align:center">APS April '18</th>
+        <th style="text-align:center">ICHEP '18</th>
+        <th style="text-align:center">APS April '19</th>
+        <th style="text-align:center">Total Points</th>
+      </tr>
+      <tr>
+        <td>Super-Kamiokande</td>
+        <td><span class='hours'>5</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>Super-Kamiokande</td>
+        <td><span class='hours'>5</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>PAMELA</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>MAGIC</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>HESS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>HPS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>GAPS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>AMS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>KATRIN</td>
+        <td><span class='hours'>4</span></td>
+        <td><span class='hours'>8</span></td>
+        <td><span class='hours'>8</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>IceCube</td>
+        <td><span class='hours'>6.31</span></td>
+        <td><span class='hours'>7.5</span></td>
+        <td><span class='hours'>8</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>MeV Gamma Ray</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>6.5</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>ADMX</td>
+        <td><span class='hours'>6.17</span></td>
+        <td><span class='hours'>6</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>ANTARES</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>5</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      </table><br>
+
     <h2 style="color:white"><b><i>Neutrino Members</i></b></h2>
-    <table colspan="3" class="table table-bordered" style="color:white">
-        <tr>
-            <th style="text-align:center">PROSPECT: 18.8 points</th>
-            <th style="text-align:center">NOvA: 22.923 points</th>
-            <th style="text-align:center">MicroBooNE: 11.444 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">COHERENT: 23.733 points</th>
-            <th style="text-align:center">JUNO: 9.5 points</th>
-            <th style="text-align:center">DUNE: 18.378 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">MINOS: 0 points</th>
-            <th style="text-align:center">BOREXINO: 7 points</th>
-            <th style="text-align:center">MiniBooNE: 11 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">ICARUS: 7.333 points</th>
-            <th colspan="2" style="text-align:center">T2K: 15.75 points</th>
-        </tr>
+    <table class="table table-bordered rowsum" style="color:white">
+      <tr>
+        <th style="text-align:center">Experiment</th>
+        <th style="text-align:center">APS April '18</th>
+        <th style="text-align:center">ICHEP '18</th>
+        <th style="text-align:center">APS April '19</th>
+        <th style="text-align:center">Total Points</th>
+      </tr>
+      <tr>
+        <td>PROSPECT</td>
+        <td><span class='hours'>5.4</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>6.4</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>NOvA</td>
+        <td><span class='hours'>7.08</span></td>
+        <td><span class='hours'>9</span></td>
+        <td><span class='hours'>6.85</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>MicroBooNE</td>
+        <td><span class='hours'>5</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>6.44</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>COHERENT</td>
+        <td><span class='hours'>6.4</span></td>
+        <td><span class='hours'>8.33</span></td>
+        <td><span class='hours'>9</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>JUNO</td>
+        <td><span class='hours'>4</span></td>
+        <td><span class='hours'>5.5</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>DUNE</td>
+        <td><span class='hours'>5.55</span></td>
+        <td><span class='hours'>5</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>MINOS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>BOREXINO</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>7</span></td>
+        <td><span class='hours'>0</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>MiniBooNE</td>
+        <td><span class='hours'>3.5</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>7.5</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>ICARUS</td>
+        <td><span class='hours'>4</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>3.33</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>T2K</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>6</span></td>
+        <td><span class='hours'>7.75</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
     </table><br>
 
     <h2 style="color:white"><b><i>LHC Members</i></b></h2>
-    <table colspan="3" class="table table-bordered" style="color:white">
-        <tr>
-            <th style="text-align:center">The Standard Model at Atlas: 8.333 points</th>
-            <th style="text-align:center">Higgs Physics at Atlas: 22.75 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">Supersymmetry at Atlas: 25.2 points</th>
-            <th style="text-align:center">Exotica at Atlas: 22.35 points</th>
-        </tr>
-        <tr>
-            <th colspan="2" style="text-align:center">Research & Development, Upgrades, Detector Operation, & Instrumentation at Atlas: 6.833 points</th>
-        </tr>
+    <table class="table table-bordered rowsum" style="color:white">
+      <tr>
+        <th style="text-align:center">Experiment</th>
+        <th style="text-align:center">APS April '18</th>
+        <th style="text-align:center">ICHEP '18</th>
+        <th style="text-align:center">APS April '19</th>
+        <th style="text-align:center">Total Points</th>
+      </tr>
+      <tr>
+        <td>The Standard Model at ATLAS</td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>0</span></td>
+        <td><span class='hours'>8.33</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>Higgs Physics at ATLAS</td>
+        <td><span class='hours'>7.25</span></td>
+        <td><span class='hours'>8</span></td>
+        <td><span class='hours'>7</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>Supersymmetry at ATLAS</td>
+        <td><span class='hours'>9</span></td>
+        <td><span class='hours'>7.2</span></td>
+        <td><span class='hours'>9</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>Exotica at ATLAS</td>
+        <td><span class='hours'>8</span></td>
+        <td><span class='hours'>7.1</span></td>
+        <td><span class='hours'>7.25</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      <tr>
+        <td>Research & Development, Upgrades, Detector Operation, & Instrumentation at ATLAS</td>
+        <td><span class='hours'>5.33</span></td>
+        <td><span class='hours'>6</span></td>
+        <td><span class='hours'>6.83</span></td>
+        <td>Print Sum of duration of this Row</td>
+      </tr>
+      </table><br>
+
+        <table class="table table-bordered rowsum" style="color:white">
+          <tr>
+            <th style="text-align:center">Experiment</th>
+            <th style="text-align:center">APS April '18</th>
+            <th style="text-align:center">ICHEP '18</th>
+            <th style="text-align:center">APS April '19</th>
+            <th style="text-align:center">Total Points</th>
+          </tr>
+          <tr>
+            <td>The Standard Model at CMS</td>
+            <td><span class='hours'>7.67</span></td>
+            <td><span class='hours'>0</span></td>
+            <td><span class='hours'>7</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>Higgs Physics at CMS</td>
+            <td><span class='hours'>8.25</span></td>
+            <td><span class='hours'>7.79</span></td>
+            <td><span class='hours'>7</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>Supersymmetry at CMS</td>
+            <td><span class='hours'>7.75</span></td>
+            <td><span class='hours'>8</span></td>
+            <td><span class='hours'>0</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>Exotica at CMS</td>
+            <td><span class='hours'>7.44</span></td>
+            <td><span class='hours'>7</span></td>
+            <td><span class='hours'>0</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
+          <tr>
+            <td>Research & Development, Upgrades, Detector Operation, & Instrumentation at CMS</td>
+            <td><span class='hours'>7.5</span></td>
+            <td><span class='hours'>6.2</span></td>
+            <td><span class='hours'>5.17</span></td>
+            <td>Print Sum of duration of this Row</td>
+          </tr>
         </table><br>
-        <table colspan="3" class="table table-bordered" style="color:white">
-        <tr>
-            <th style="text-align:center">The Standard Model at CMS: 14.667 points</th>
-            <th style="text-align:center">Higgs Physics at CMS: 23.035 points</th>
-        </tr>
-        <tr>
-            <th style="text-align:center">Supersymmetry at CMS: 15.75 points</th>
-            <th style="text-align:center">Exotica at CMS: 14.444 points</th>
-        </tr>
-        <tr>
-            <th colspan="2" style="text-align:center">Research & Development, Upgrades, Detector Operation, & Instrumentation at CMS: 18.867 points</th>
-        </tr>
-    </table><br>
-
-
 
     <button id="myBtn" onclick="topFunction()">
     <span class="glyphicon glyphicon-arrow-up"></span> Top </button>
@@ -266,11 +539,24 @@
         document.documentElement.scrollTop = 0;
     }
      </script>
+     <script>
+        $(".rowsum tr:has(.hours)").each(function() {
+        var sum = 0;
+        $(this).find('td .hours').each(function() {
+        var parts = $(this).text().split('.')
+        sum += (parts[0] * 60 || 0)+ (+parts[1] || 0);
+        });
+        var mins = Math.floor(sum / 60);
+        var sec = sum % 60;
+        $(this).find("td:last").html(mins + '.' +  sec).slice(-2)
+        })
+     </script>
     <div class="flex-container">
           <p style="color:white"><i>Developed at <a href="http://physics.ku.edu/" style="color:white"><u> The University of Kansas - Physics & Astronomy Department</u></a> |
           <a href="about.html" style="color:white"><u>About</u></a> | <a href="creators.html" style="color:white"><u>The Creators</u></a> | &copy; 2018</i></p>
-   </div>
-   </div>
-
-   </body>
-   </html>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
